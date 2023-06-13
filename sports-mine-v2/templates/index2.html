@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <meta http-equiv="x-ua-compatible" content="ie=edge" />
+  <title>Material Design for Bootstrap</title>
+  <!-- MDB icon -->
+  <link rel="icon" href="img/mdb-favicon.ico" type="image/x-icon" />
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.2/css/all.css" />
+  <!-- Google Fonts Roboto -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap" />
+  <!-- MDB -->
+  <!-- <link rel="stylesheet" href="css/mdb.min.css" /> -->
+  <!-- Font Awesome -->
+<link
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+rel="stylesheet"
+/>
+<!-- Google Fonts -->
+<link
+href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap"
+rel="stylesheet"
+/>
+<!-- MDB -->
+<link
+href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.3.1/mdb.min.css"
+rel="stylesheet"
+/>
+<style>
+.page-content {
+  display: grid;
+  grid-gap: 1rem;
+  padding: 1rem;
+  max-width: 1024px;
+  margin: 0 auto;
+  font-family: var(--font-sans);
+}
+@media (min-width: 600px) {
+  .page-content {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (min-width: 800px) {
+  .page-content {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+.landing-card{
+  position: relative;
+  display: flex;
+  align-items: flex-end;
+  overflow: hidden;
+  padding: 1rem;
+  width: 100%;
+  text-align: center;
+  color: whitesmoke;
+  background-color: whitesmoke;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1), 0 2px 2px rgba(0, 0, 0, 0.1), 0 4px 4px rgba(0, 0, 0, 0.1), 0 8px 8px rgba(0, 0, 0, 0.1), 0 16px 16px rgba(0, 0, 0, 0.1);
+
+}
+@media (min-width: 600px) {
+  .landing-card {
+    height: 350px;
+  }
+}
+.landing-card:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 110%;
+  background-size: cover;
+  background-position: 0 0;
+  transition: transform calc(var(--d) * 1.5) var(--e);
+  pointer-events: none;
+}
+.landing-card:after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 200%;
+  pointer-events: none;
+  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.009) 11.7%, rgba(0, 0, 0, 0.034) 22.1%, rgba(0, 0, 0, 0.072) 31.2%, rgba(0, 0, 0, 0.123) 39.4%, rgba(0, 0, 0, 0.182) 46.6%, rgba(0, 0, 0, 0.249) 53.1%, rgba(0, 0, 0, 0.32) 58.9%, rgba(0, 0, 0, 0.394) 64.3%, rgba(0, 0, 0, 0.468) 69.3%, rgba(0, 0, 0, 0.54) 74.1%, rgba(0, 0, 0, 0.607) 78.8%, rgba(0, 0, 0, 0.668) 83.6%, rgba(0, 0, 0, 0.721) 88.7%, rgba(0, 0, 0, 0.762) 94.1%, rgba(0, 0, 0, 0.79) 100%);
+  transform: translateY(-50%);
+  transition: transform calc(var(--d) * 2) var(--e);
+}
+
+.landing-card:nth-child(1):before {
+  background-image: url(https://wallpapercave.com/wp/wp8513152.png);
+}
+.landing-card:nth-child(2):before {
+  background-image: url(https://tse4.mm.bing.net/th?id=OIP.YhPu-jK-WUtChZSPdoda6wHaLH&pid=Api&P=0&h=180);
+}
+.landing-card:nth-child(3):before {
+  background-image: url(https://images.unsplash.com/photo-1579952363873-27f3bade9f55?ixlib=rb-1.2.1&w=1000&q=80);
+}
+
+.landing-content {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  padding: 1rem;
+  transition: transform var(--d) var(--e);
+  z-index: 1;
+}
+.landing-content > * + * {
+  margin-top: 1rem;
+}
+
+.title {
+  font-size: 1.3rem;
+  font-weight: bold;
+  line-height: 1.2;
+}
+
+.copy {
+  font-family: var(--font-serif);
+  font-size: 1.125rem;
+  font-style: italic;
+  line-height: 1.35;
+}
+
+
+.landing-btn {
+  cursor: pointer;
+  margin-top: 1.5rem;
+  padding: 0.75rem 1.5rem;
+  font-size: 0.65rem;
+  font-weight: bold;
+  letter-spacing: 0.025rem;
+  text-transform: uppercase;
+  color: white;
+  background-color: black;
+  border: none;
+}
+.landing-btn:hover {
+  background-color: #0d0d0d;
+}
+.landing-btn:focus {
+  outline: 1px dashed yellow;
+  outline-offset: 3px;
+}
+
+@media (hover: hover) and (min-width: 600px) {
+  .landing-card:after {
+    transform: translateY(0);
+  }
+
+  .landing-content {
+    transform: translateY(calc(100% - 4.5rem));
+  }
+  .landing-content > *:not(.title) {
+    opacity: 0;
+    transform: translateY(1rem);
+    transition: transform var(--d) var(--e), opacity var(--d) var(--e);
+  }
+
+  .landing-card:hover,
+.landing-card:focus-within {
+    align-items: center;
+  }
+  .landing-card:hover:before,
+.landing-card:focus-within:before {
+    transform: translateY(-4%);
+  }
+  .landing-card:hover:after,
+.landing-card:focus-within:after {
+    transform: translateY(-50%);
+  }
+  .landing-card:hover .landing-content,
+.landing-card:focus-within .landing-content {
+    transform: translateY(0);
+  }
+  .landing-card:hover .landing-content > *:not(.title),
+.landing-card:focus-within .landing-content > *:not(.title) {
+    opacity: 1;
+    transform: translateY(0);
+    transition-delay: calc(var(--d) / 8);
+  }
+
+  .landing-card:focus-within:before, .landing-card:focus-within:after,
+.landing-card:focus-within .landing-content,
+.landing-card:focus-within .landing-content > *:not(.title) {
+    transition-duration: 0s;
+  }
+}
+
+
+</style>
+
+</head>
+
+<body>
+  <!-- Start your project here-->
+
+  <div id="preview" class="preview"><div style="display: none;"></div><div>
+  <div data-draggable="true" class="" style="position: relative;" draggable="false">
+  <!----><!----><section draggable="false" class="overflow-hidden pt-5" data-v-271253ee=""><section class="mb-10">
+  <!-- Background image --> <div class="p-5 text-center bg-image" style="background-image: url(&quot;https://images.unsplash.com/photo-1511512578047-dfb367046420?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=M3w5NjI0M3wwfDF8c2VhcmNofDF8fGdhbWVzfGVufDB8fHx8MTY4NjIzNDM5M3ww&amp;ixlib=rb-4.0.3&amp;q=80&amp;w=1080&quot;); 
+  height: 500px; background-size: cover; background-position: 50% 50%; background-color: transparent;" aria-controls="#picker-editor"></div>
+  <!-- Background image --> <div class="card mx-4 mx-md-5 text-center shadow-5-strong" style=" margin-top: -170px; background: hsla(0, 0%, 100%, 0.7); backdrop-filter: blur(30px); ">
+  <div class="card-body px-4 py-5 px-md-5"> <h1 class="display-3 fw-bold ls-tight mb-4"> <span>SPORTSmine</span> <br> <span class="text-danger">Data Analytics And Visualization</span> </h1> 
+  <a class="btn    btn-danger btn-lg py-3 px-5 mb-2 me-2" href="/about" role="button" aria-controls="#picker-editor" draggable="false">ABOUT</a> </div> </div> </section></section>
+  <!----></div><div data-draggable="true" class="" style="position: relative;" draggable="false"></div>
+  <!----><!----><section draggable="false" class="container pt-5" data-v-271253ee=""><section class="mb-10 text-center text-lg-start">
+  <style> @media (min-width: 992px) { .cascading-right { margin-right: -50px; } .rotate-lg-6 { transform: rotate(6deg); } } /* These are the KEY styles - you can add them directly to any object you want in your project */ .fancy-border-radius { border-radius: 53% 47% 52% 48% / 36% 41% 59% 64%; } </style> <!-- Jumbotron --> <div class="container py-4"> <div class="row g-0 align-items-center"> <div class="col-lg-6 mb-5 mb-lg-0"> <div class="card cascading-right" style=" background: hsla(0, 0%, 100%, 0.616); backdrop-filter: blur(30px); z-index: 1; "> <div class="card-body px-4 py-5 p-md-5 shadow-5"> <h2 class="fw-bold mb-4 display-5">Why is it so great?
+</h2> <p class="text-muted mb-5" style="font-weight: bold;">
+  This project is highly interesting due to its ability to leverage data for insights into player performance, team dynamics, and game outcomes. It employs advanced statistical methods and visualizations, allowing for the identification of patterns and trends. The project offers interactive dashboards, making it user-friendly for stakeholders. Ultimately, it enables data-driven decision-making, optimizing strategies, and providing a competitive edge in sports.</p> <div class="row"> <div class="col-md-4 mb-5 mb-md-0"> <h2 class="fw-bold text-dark mb-3"></h2> <h5 class="text-muted mb-0"></h5> </div> <div class="col-md-4 mb-5 mb-md-0"> <h2 class="fw-bold text-dark mb-3"></h2> <h5 class="text-muted mb-0"></h5> </div> <div class="col-md-4"> <h2 class="fw-bold text-dark mb-3"></h2> <h5 class="text-muted mb-0"></h5> </div> </div> </div> </div> </div> <div class="col-lg-6 mb-5 mb-lg-0"> <img src="https://images.unsplash.com/photo-1579952363873-27f3bade9f55?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=M3w5NjI0M3wwfDF8c2VhcmNofDJ8fHNwb3J0c3xlbnwwfHx8fDE2ODYyMzQ0MTV8MA&amp;ixlib=rb-4.0.3&amp;q=80&amp;w=1080" class="w-100 shadow-4 rotate-lg-6 fancy-border-radius" alt="" aria-controls="#picker-editor" draggable="false"> </div> </div> </div> <!-- Jumbotron --> </section></section><!----></div></div></div>
+<h1 style="text-align: center; font-family: cursive; color: brown; font-weight: bold;">EXPLORE THE DASHBOARD</h1>
+
+
+<main class="page-content">
+  <div class="card landing-card">
+    <div class="content landing-content">
+      <h2 class="title">CRICKET</h2>
+      <p class="copy">Analysis And Visualization Of Cricket Dataset</p>
+      <a href="/cricket" class="btn landing-btn btn-primary">View Dashboard</a>
+    </div>
+  </div>
+  <div class="card landing-card">
+    <div class="content landing-content">
+      <h2 class="title">UFC</h2>
+      <p class="copy">Analysis and visualisation of UFC Dataset</p>
+      <a href="/ufc" class="btn landing-btn btn-primary">View Dashboard</a>
+    </div>
+  </div>
+  <div class="card landing-card">
+    <div class="content landing-content">
+      <h2 class="title">FOOTBALL</h2>
+      <p class="copy">Analysis And Visualization of Football Dataset</p>
+      <a href="/football" class="btn landing-btn btn-primary">View Dashboard</a>
+    </div>
+  </div>
+</main>
+
+
+
+  <!-- End your project here-->
+
+  <!-- MDB -->
+  <script type="text/javascript" src="js/mdb.min.js"></script>
+  <!-- Custom scripts -->
+  <script type="text/javascript"></script>
+</body>
+
+</html>
